@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+    <link rel="stylesheet" href="style.css">
+    <a href="dangky.html"></a>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="index.html">Sản phẩm</a></li>
+                <li><a href="dangky.html">Đăng nhập/Đăng ký</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <body class="">
+
+            <div class="container">
+                <header>
+                    <h1>Your Shopping Cart</h1>
+                    <div class="shopping">
+                        <img src="image/shopping.svg">
+                        <span class="quantity">0</span>
+                    </div>
+                </header>
+
+                <div class="list">
+
+                </div>
+            </div>
+            <div class="card">
+                <h1>Card</h1>
+                <ul class="listCard">
+                </ul>
+                <div class="checkOut">
+                    <div class="total">0</div>
+                    <div class="closeShopping">Close</div>
+                </div>
+            </div>
+
+            <script src="app.js"></script>
+    </main>
+
+    <footer>
+        <p>Đây là footer</p>
+    </footer>
+    <script>
+
+const totalElement = document.querySelector('.total');
+
+// Add an event listener to the "total" element
+totalElement.addEventListener('click', function() {
+  // Remove all items from the shopping cart
+  const cartItems = document.querySelector('.listCard');
+  cartItems.innerHTML = '';
+
+  // Reset the total to 0
+  const total = document.querySelector('.total');
+  total.textContent = '0';
+});
+    </script>
+</body>
+
+</html>
